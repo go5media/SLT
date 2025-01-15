@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SOXLantern" />
+    <link rel="manifest" href="site.webmanifest" />
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SOXLantern.com - Celebrating the history, design, and legacy of SOX lighting technologies.">
+    <title>SOXLantern.com - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+
+<body>
+
+    
+    <nav>
+        <div class="nav-container">
+            <button class="hamburger" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger Icon -->
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="restoration.html">Restoration</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Reference to the external script -->
+    <script src="script.js"></script>
+
+    
+    <div class="hero">
+        <video id="backgroundVideo" autoplay muted loop playsinline preload="auto">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>SOXLantern.com</h1>
+        <p>Celebrating the history, design, and legacy of SOX lighting technologies.</p>
+    </div>
+    <main>
+        <!-- Introduction Section -->
+        <section class="introduction">
+            <h2>Welcome to SOXLantern.com</h2>
+            <p>SOXLantern.com is your ultimate destination for everything related to low-pressure sodium (SOX) lighting. We explore its history, showcase restoration techniques, and celebrate its enduring beauty. Whether you're an enthusiast, a collector, or just curious, you've come to the right place.</p>
+        </section>
+
+        <!-- Featured Articles Section -->
+        <section class="featured-articles">
+            <h2>Featured Articles</h2>
+            <div class="articles-grid">
+                <article>
+                    <img src="video.jpg" alt="The History of SOX Lighting">
+                    <h3><a href="history.html">The History of SOX Lighting</a></h3>
+                    <p>Discover the fascinating origins and evolution of SOX lighting technology, a cornerstone of urban illumination for decades.</p>
+                </article>
+                <article>
+                    <img src="video.jpg" alt="Restoring Vintage Fixtures">
+                    <h3><a href="restoration.html">Restoring Vintage Fixtures</a></h3>
+                    <p>Learn practical tips and techniques for restoring vintage SOX lighting fixtures to their former glory.</p>
+                </article>
+                <article>
+                    <img src="video.jpg" alt="SOX Lighting Gallery">
+                    <h3><a href="gallery.html">SOX Lighting Gallery</a></h3>
+                    <p>Explore our collection of images showcasing the timeless beauty of SOX lighting in various settings.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="call-to-action">
+            <h2>Join Our Community</h2>
+            <p>Are you passionate about preserving the legacy of SOX lighting?</p>
+            <a href="https://donate.stripe.com/5kAbLU8Dee3QgZWbII" class="cta-button">Donate Now</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 SOXLantern.com. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
