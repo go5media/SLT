@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SOXLantern" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our SOX Lighting Gallery featuring restored and vintage fixtures.">
+    <title>SOXLantern.com - SOX Lighting Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for image enlargement */
+        .lightbox {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Dimmed background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox.active {
+            display: flex; /* Show lightbox when active */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <button class="hamburger" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger Icon -->
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="restoration.html">Restoration</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Reference to the external script -->
+    <script src="script.js"></script>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <video autoplay muted loop playsinline preload="auto" class="hero-video">
+            <source src="gallery-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>SOX Lighting Gallery</h1>
+            <p>Showcasing the timeless beauty of SOX lighting fixtures.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <main>
+        <section class="gallery-wrapper">
+            <h2 class="gallery-title">SOX Lighting Gallery</h2>
+            <div class="gallery-grid">
+                <img src="image1.jpg" alt="SOX Light 1" class="gallery-item" onclick="enlargeImage(this)">
+                <img src="image2.jpg" alt="SOX Light 2" class="gallery-item" onclick="enlargeImage(this)">
+                <img src="image3.jpg" alt="SOX Light 3" class="gallery-item" onclick="enlargeImage(this)">
+                <img src="image4.jpg" alt="SOX Light 4" class="gallery-item" onclick="enlargeImage(this)">
+                <img src="image5.jpg" alt="SOX Light 5" class="gallery-item" onclick="enlargeImage(this)">
+                <img src="image6.jpg" alt="SOX Light 6" class="gallery-item" onclick="enlargeImage(this)">
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-image" src="" alt="Enlarged image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SOXLantern.com. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Image Enlargement -->
+    <script>
+        function enlargeImage(image) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = image.src; // Set lightbox image source to clicked image
+            lightbox.classList.add('active'); // Show the lightbox
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active'); // Hide the lightbox
+        }
+    </script>
+</body>
+</html>
